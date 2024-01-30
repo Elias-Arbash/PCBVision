@@ -1,1 +1,28 @@
+# PCB-Vision Requirements:
+------------------------------------------------------------------
+## Please install the following Python Libraries
+------------------------------------------------------------------
+os
+numpy
+matplotlib
+pathlib
+spectral
+scipy
+cv2
+sys
+seaborn
+timeit
+logging
+json
+torch
+torchvision
+PIL
+time
+tqdm
+sklearn
+spectral
+
+# PCA -----------------------------------------------------------
+
+hylite: https://github.com/hifexplo/hylite/tree/master/hylite
 
