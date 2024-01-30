@@ -6,7 +6,7 @@ Our primary focus is to enhance the non-invasive optical analysis of E-waste mat
 
 ## Research Paper
 
-This GitHub repository corresponds to a research paper titled "PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards." The paper introduces the first RGB-Hyperspectral (HS) benchmark segmentation dataset for PCBs. You can access the paper [here](https://arxiv.org/abs/2401.06528).
+This GitHub repository corresponds to the research paper titled "PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards." The paper introduces the first RGB-Hyperspectral Imaging (HSI) benchmark segmentation dataset for PCBs. You can access the paper [here](https://arxiv.org/abs/2401.06528).
 
 ## Dataset Details
 
@@ -25,7 +25,7 @@ To use the codes without errors, install the libraries listed in the Requirement
 
 ### Usage
 
-For detailed code instructions, please refer to the code documentations. More information about the methodology and experiments can be found in the paper [here](https://arxiv.org/abs/2401.06528).
+For detailed code instructions, please refer to the code documentation. More information about the methodology and experiments can be found in the paper [here](https://arxiv.org/abs/2401.06528).
 
 ## Data Access
 
@@ -42,6 +42,9 @@ The code is licensed under the Apache-2.0 license. Any further development and a
 ## Citation
 
 When using the materials of the work and dataset, please cite it as follows:
+**Word:**
+
+Arbash, Elias, Fuchs, Margret, Rasti, Behnood, Lorenz, Sandra, Ghamisi, Pedram, & Gloaguen, Richard. (2024). PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards (Version 1) [Data set]. Rodare. http://doi.org/10.14278/rodare.270
 
 **Latex:**
 ```latex
@@ -51,3 +54,5 @@ When using the materials of the work and dataset, please cite it as follows:
   journal={arXiv preprint arXiv:2401.06528},
   year={2024}
 }
+
+4
