@@ -45,6 +45,10 @@ All comments and contributions are welcomed. The repository can be forked, edite
 
 The code is licensed under the Apache-2.0 license. Any further development and application using this work should be opened and shared with the community.
 
+## Acknowledgment 
+The authors express their gratitude to EIT RawMaterials for funding the project ’RAMSES-4-CE’ (KIC RM 19262). Appreciation is extended to the European Regional Development Fund (EFRE) and the Land of Saxony for their support
+in funding the computational equipment under the project ’CirculAIre.’
+
 ## Citation
 
 When using the materials of the work and dataset, please cite it as follows:
@@ -60,3 +64,4 @@ Arbash, Elias, Fuchs, Margret, Rasti, Behnood, Lorenz, Sandra, Ghamisi, Pedram, 
   journal={arXiv preprint arXiv:2401.06528},
   year={2024}
 }
+
