@@ -3,7 +3,7 @@
 ## Overview
 
 Our primary focus is to enhance the non-invasive optical analysis of E-waste materials, specifically plastics and printed circuit boards (PCBs). We aim to develop a smart multisensor network that utilizes RGB cameras and hyperspectral imaging, along with other types of sensors, to improve the efficiency of the E-waste recycling industry. This involves providing both quantitative and qualitative information that aids in decision-making for subsequent sorting and processing.
-![http://url/to/img2.png](https://github.com/Elias-Arbash/PCBVision/blob/main/images/workflow2.png)
+!(https://github.com/Elias-Arbash/PCBVision/blob/main/images/workflow2.png)
 
 ## Research Paper
 
