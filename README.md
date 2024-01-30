@@ -3,8 +3,7 @@
 ## Overview
 
 Our primary focus is to enhance the non-invasive optical analysis of E-waste materials, specifically plastics and printed circuit boards (PCBs). We aim to develop a smart multisensor network that utilizes RGB cameras and hyperspectral imaging, along with other types of sensors, to improve the efficiency of the E-waste recycling industry. This involves providing both quantitative and qualitative information that aids in decision-making for subsequent sorting and processing.
-
-![http://url/to/img.png](https://github.com/Elias-Arbash/PCBVision/blob/main/images/training_hsi.png)
+![http://url/to/img.png](https://github.com/Elias-Arbash/PCBVision/blob/main/images/workflow.png)
 
 ## Research Paper
 
@@ -18,6 +17,9 @@ The dataset includes:
 - RGB images of 53 PCBs scanned with a high-resolution RGB camera (Teledyne Dalsa C4020).
 - 53 hyperspectral data cubes of those PCBs scanned with Specim FX10 in the VNIR range.
 - Two segmentation ground truth files: 'General' and 'Monoseg' for 4 classes of interest - 'others,' 'IC,' 'Capacitor,' and 'Connectors.'
+
+![http://url/to/img.png](https://github.com/Elias-Arbash/PCBVision/blob/main/images/training_hsi.png)
+
 
 ## Code Repository
 
