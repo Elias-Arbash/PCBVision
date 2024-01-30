@@ -1,12 +1,16 @@
 # PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards
-
+[HZDR](https://hzdr.de) - [Hif_Exploration](https://www.iexplo.space/)
 ## Overview
 
 Our primary focus is to enhance the non-invasive optical analysis of E-waste materials, specifically plastics and printed circuit boards (PCBs). We aim to develop a smart multisensor network that utilizes RGB cameras and hyperspectral imaging, along with other types of sensors, to improve the efficiency of the E-waste recycling industry. This involves providing both quantitative and qualitative information that aids in decision-making for subsequent sorting and processing.
 
+![http://url/to/img.png](https://github.com/Elias-Arbash/PCBVision/blob/main/images/training_hsi.png)
+
 ## Research Paper
 
 This GitHub repository corresponds to the research paper titled "PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards." The paper introduces the first RGB-Hyperspectral Imaging (HSI) benchmark segmentation dataset for PCBs. You can access the paper [here](https://arxiv.org/abs/2401.06528).
+
+images/training_hsi.png
 
 ## Dataset Details
 
@@ -54,5 +58,3 @@ Arbash, Elias, Fuchs, Margret, Rasti, Behnood, Lorenz, Sandra, Ghamisi, Pedram, 
   journal={arXiv preprint arXiv:2401.06528},
   year={2024}
 }
-
-4
