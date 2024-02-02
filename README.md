@@ -29,9 +29,6 @@ The repository includes code to read, manipulate, and process large-scale data. 
 
 To use the codes without errors, install the libraries listed in the Requirements.txt file. The codes require at least 1 GPU to run and handle the data.
 
-### Usage
-
-For detailed code instructions, please refer to the code documentation. More information about the methodology and experiments can be found in the paper [here](https://arxiv.org/abs/2401.06528).
 
 ## Data Access
 
