@@ -35,7 +35,7 @@ For detailed code instructions, please refer to the code documentation. More inf
 
 ## Data Access
 
-To utilize the dataset, download it from the Rodare website: [Rodare](https://rodare.hzdr.de/record/2704), or from Zenodo: [Zenodo]([https://rodare.hzdr.de/record/2704](https://zenodo.org/records/10617721))
+To utilize the dataset, download it from the Rodare website: [Rodare](https://rodare.hzdr.de/record/2704), or from Zenodo: [Zenodo](https://zenodo.org/records/10617721).
 
 ## Contributions
 
