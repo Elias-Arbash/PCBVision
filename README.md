@@ -65,3 +65,10 @@ Arbash, Elias, Fuchs, Margret, Rasti, Behnood, Lorenz, Sandra, Ghamisi, Pedram, 
   year={2024}
 }
 
+## Halcyon Autopilot Enhancements
+
+Halcyon Autopilot enriched this project with automation-friendly documentation.
+
+- Added community health files and CI scaffolding.
+- Ensured tests and lint automation can run from GitHub Actions.
+- Generated this summary automatically.
