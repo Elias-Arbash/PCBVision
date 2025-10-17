@@ -16,9 +16,15 @@ import torch.nn.functional as F
 import torch.utils.model_zoo as model_zoo
 
 class Bottleneck(nn.Module):
+"""
+TODO: Document Bottleneck.
+"""
     expansion = 4
 
     def __init__(self, inplanes, planes, stride=1, rate=1, downsample=None):
+    """
+    TODO: Document __init__.
+    """
         super(Bottleneck, self).__init__()
         self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=1, bias=False)
         self.bn1 = nn.BatchNorm2d(planes)
@@ -33,6 +39,9 @@ class Bottleneck(nn.Module):
         self.rate = rate
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         residual = x
 
         out = self.conv1(x)
@@ -56,7 +65,13 @@ class Bottleneck(nn.Module):
 
 class ResNet(nn.Module):
 
+"""
+TODO: Document ResNet.
+"""
     def __init__(self, nInputChannels, block, layers, os=16, pretrained=False):
+    """
+    TODO: Document __init__.
+    """
         self.inplanes = 64
         super(ResNet, self).__init__()
         if os == 16:
@@ -88,6 +103,9 @@ class ResNet(nn.Module):
             self._load_pretrained_model()
 
     def _make_layer(self, block, planes, blocks, stride=1, rate=1):
+    """
+    TODO: Document _make_layer.
+    """
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
@@ -105,6 +123,9 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def _make_MG_unit(self, block, planes, blocks=[1,2,4], stride=1, rate=1):
+    """
+    TODO: Document _make_MG_unit.
+    """
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             downsample = nn.Sequential(
@@ -122,6 +143,9 @@ class ResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, input):
+    """
+    TODO: Document forward.
+    """
         x = self.conv1(input)
         x = self.bn1(x)
         x = self.relu(x)
@@ -135,6 +159,9 @@ class ResNet(nn.Module):
         return x, low_level_feat
 
     def _init_weight(self):
+    """
+    TODO: Document _init_weight.
+    """
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 # n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
@@ -145,6 +172,9 @@ class ResNet(nn.Module):
                 m.bias.data.zero_()
 
     def _load_pretrained_model(self):
+    """
+    TODO: Document _load_pretrained_model.
+    """
         pretrain_dict = model_zoo.load_url('https://download.pytorch.org/models/resnet101-5d3b4d8f.pth')
         model_dict = {}
         state_dict = self.state_dict()
@@ -155,12 +185,21 @@ class ResNet(nn.Module):
         self.load_state_dict(state_dict)
 
 def ResNet101(nInputChannels=3, os=16, pretrained=False):
+"""
+TODO: Document ResNet101.
+"""
     model = ResNet(nInputChannels, Bottleneck, [3, 4, 23, 3], os, pretrained=pretrained)
     return model
 
 
 class ASPP_module(nn.Module):
+"""
+TODO: Document ASPP_module.
+"""
     def __init__(self, inplanes, planes, rate):
+    """
+    TODO: Document __init__.
+    """
         super(ASPP_module, self).__init__()
         if rate == 1:
             kernel_size = 1
@@ -176,12 +215,18 @@ class ASPP_module(nn.Module):
         self._init_weight()
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         x = self.atrous_convolution(x)
         x = self.bn(x)
 
         return self.relu(x)
 
     def _init_weight(self):
+    """
+    TODO: Document _init_weight.
+    """
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 # n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
@@ -193,7 +238,13 @@ class ASPP_module(nn.Module):
 
 
 class DeepLabv3_plus(nn.Module):
+"""
+TODO: Document DeepLabv3_plus.
+"""
     def __init__(self, nInputChannels=3, n_classes=4, os=16, pretrained=False, _print=True):
+    """
+    TODO: Document __init__.
+    """
         if _print:
             print("Constructing DeepLabv3+ model...")
             print("Number of classes: {}".format(n_classes))
@@ -240,6 +291,9 @@ class DeepLabv3_plus(nn.Module):
                                        nn.Conv2d(256, n_classes, kernel_size=1, stride=1))
 
     def forward(self, input):
+    """
+    TODO: Document forward.
+    """
         x, low_level_features = self.resnet_features(input)
         x1 = self.aspp1(x)
         x2 = self.aspp2(x)
@@ -268,11 +322,17 @@ class DeepLabv3_plus(nn.Module):
         return x
 
     def freeze_bn(self):
+    """
+    TODO: Document freeze_bn.
+    """
         for m in self.modules():
             if isinstance(m, nn.BatchNorm2d):
                 m.eval()
 
     def __init_weight(self):
+    """
+    TODO: Document __init_weight.
+    """
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 # n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels

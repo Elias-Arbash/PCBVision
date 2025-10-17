@@ -234,6 +234,9 @@ def Generate_data(data_list, HSI_cubes, seg_masks):
     return cubes, masks
 
 def data_augmentation(hsi_cube, mask):
+"""
+TODO: Document data_augmentation.
+"""
     np.random.seed(0)
     """
     Augments a hyperspectral cube and its corresponding mask with different
@@ -312,6 +315,9 @@ def data_augmentation(hsi_cube, mask):
 
 def evaluate_segmentation(ground_truth_masks, predicted_masks, num_classes):
     # Initialize variables for aggregating evaluation metrics
+"""
+TODO: Document evaluate_segmentation.
+"""
     confusion_matrix_sum = np.zeros((num_classes, num_classes), dtype=np.int64)
     true_positive_sum = np.zeros(num_classes, dtype=np.int64)
     true_negative_sum = np.zeros(num_classes, dtype=np.int64)

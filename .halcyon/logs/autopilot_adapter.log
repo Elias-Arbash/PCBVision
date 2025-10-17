@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 15, in <module>
+    from halcyon_adapter import HalcyonAdapter
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/__init__.py", line 5, in <module>
+    from .adapter import HalcyonAdapter  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/adapter.py", line 21, in <module>
+    from halcyon_adapter.actions.executor import ActionExecutor
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/actions/executor.py", line 16, in <module>
+    from .automation import (
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/actions/automation.py", line 11, in <module>
+    from autopilot.tasks import TASK_REGISTRY, TaskOutcome
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/autopilot/__init__.py", line 5, in <module>
+    from .core import run_autopilot
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/autopilot/core.py", line 18, in <module>
+    from halcyon_onboard import ForkResult, clone_repository, ensure_branch, ensure_workspace, fork_repository
+ModuleNotFoundError: No module named 'halcyon_onboard'
