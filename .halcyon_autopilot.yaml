@@ -1,4 +1,4 @@
-generated_at: '2025-10-17T19:16:05.331745+00:00'
+generated_at: '2025-10-18T11:25:02.932895+00:00'
 mode: full
 tasks:
 - slug: docs-readme
@@ -55,47 +55,6 @@ tasks:
   tags:
   - lint
   - fdmc:develop
-- slug: ci
-  title: Add CI workflows
-  category: ci-cd
-  phase: Harden
-  command: SETUP_CI
-  params: {}
-  weight: 2
-  tags:
-  - ci
-  - fdmc:harden
-- slug: community
-  title: Add community health files
-  category: community
-  phase: Document
-  command: WRITE_COMMUNITY_FILES
-  params: {}
-  weight: 2
-  tags:
-  - docs
-  - community
-  - fdmc:document
-- slug: pre-commit
-  title: Configure pre-commit hooks
-  category: pre-commit
-  phase: Harden
-  command: SETUP_PRECOMMIT
-  params: {}
-  weight: 1
-  tags:
-  - ci
-  - fdmc:harden
-- slug: release-notes
-  title: Generate release notes
-  category: release-notes
-  phase: Document
-  command: GENERATE_CHANGELOG
-  params: {}
-  weight: 1
-  tags:
-  - docs
-  - fdmc:document
 - slug: security
   title: Run security scanning
   category: security
@@ -109,20 +68,20 @@ tasks:
   - fdmc:harden
 metrics_baseline:
   total_python_files: 9
-  functions_without_docstrings: 55
-  functions_without_type_hints: 58
+  functions_without_docstrings: 0
+  functions_without_type_hints: 11
   modules_without_tests: 9
   bare_except_blocks: 0
   logging_statements: 0
-  todo_count: 0
-  workflows_present: false
-  pre_commit_present: false
-  contributing_present: false
+  todo_count: 55
+  workflows_present: true
+  pre_commit_present: true
+  contributing_present: true
   license_present: true
-  code_of_conduct_present: false
-  issue_templates_present: false
-  pr_template_present: false
-  changelog_present: false
+  code_of_conduct_present: true
+  issue_templates_present: true
+  pr_template_present: true
+  changelog_present: true
   docs_dir_present: false
   coverage_files: 0
   requirements_files: 0
