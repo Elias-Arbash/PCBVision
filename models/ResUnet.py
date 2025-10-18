@@ -14,7 +14,13 @@ import torch
 import torch.nn as nn
 
 class ResUnet(nn.Module):
+"""
+TODO: Document ResUnet.
+"""
     def __init__(self, channel, out_channel, filters=[64, 128, 256, 512]):
+    """
+    TODO: Document __init__.
+    """
         super(ResUnet, self).__init__()
 
         self.input_layer = nn.Sequential(
@@ -47,6 +53,9 @@ class ResUnet(nn.Module):
 
     def forward(self, x):
         # Encode
+    """
+    TODO: Document forward.
+    """
         x1 = self.input_layer(x) + self.input_skip(x)
         x2 = self.residual_conv_1(x1)
         x3 = self.residual_conv_2(x2)
@@ -74,7 +83,13 @@ class ResUnet(nn.Module):
 
 
 class ResidualConv(nn.Module):
+"""
+TODO: Document ResidualConv.
+"""
     def __init__(self, input_dim, output_dim, stride, padding):
+    """
+    TODO: Document __init__.
+    """
         super(ResidualConv, self).__init__()
 
         self.conv_block = nn.Sequential(
@@ -94,11 +109,20 @@ class ResidualConv(nn.Module):
 
     def forward(self, x):
 
+    """
+    TODO: Document forward.
+    """
         return self.conv_block(x) + self.conv_skip(x)
 
 
 class Upsample(nn.Module):
+"""
+TODO: Document Upsample.
+"""
     def __init__(self, input_dim, output_dim, kernel, stride):
+    """
+    TODO: Document __init__.
+    """
         super(Upsample, self).__init__()
 
         self.upsample = nn.ConvTranspose2d(
@@ -106,4 +130,7 @@ class Upsample(nn.Module):
         )
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         return self.upsample(x)

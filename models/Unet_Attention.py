@@ -17,7 +17,13 @@ from torch.nn import init
 
 class conv_block(nn.Module):
     # ... (unchanged)
+"""
+TODO: Document conv_block.
+"""
     def __init__(self,ch_in,ch_out):
+    """
+    TODO: Document __init__.
+    """
         super(conv_block,self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(ch_in, ch_out, kernel_size=3,stride=1,padding=1,bias=True),
@@ -30,12 +36,21 @@ class conv_block(nn.Module):
 
 
     def forward(self,x):
+    """
+    TODO: Document forward.
+    """
         x = self.conv(x)
         return x
 
 class up_conv(nn.Module):
     # ... (unchanged)
+"""
+TODO: Document up_conv.
+"""
     def __init__(self,ch_in,ch_out):
+    """
+    TODO: Document __init__.
+    """
         super(up_conv,self).__init__()
         self.up = nn.Sequential(
             nn.Upsample(scale_factor=2),
@@ -45,6 +60,9 @@ class up_conv(nn.Module):
         )
 
     def forward(self,x):
+    """
+    TODO: Document forward.
+    """
         x = self.up(x)
         return x
 
@@ -52,7 +70,13 @@ class up_conv(nn.Module):
 
 class Attention_block(nn.Module):
     # ... (unchanged)
+"""
+TODO: Document Attention_block.
+"""
     def __init__(self,F_g,F_l,F_int):
+    """
+    TODO: Document __init__.
+    """
         super(Attention_block,self).__init__()
         self.W_g = nn.Sequential(
             nn.Conv2d(F_g, F_int, kernel_size=1,stride=1,padding=0,bias=True),
@@ -73,6 +97,9 @@ class Attention_block(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         
     def forward(self,g,x):
+    """
+    TODO: Document forward.
+    """
         g1 = self.W_g(g)
         x1 = self.W_x(x)
         psi = self.relu(g1+x1)
@@ -84,7 +111,13 @@ class Attention_block(nn.Module):
 
 class AttU_Net(nn.Module):
     # ... (unchanged) except for 'out_channels'
+"""
+TODO: Document AttU_Net.
+"""
     def __init__(self,img_ch=3,output_ch=4):
+    """
+    TODO: Document __init__.
+    """
         super(AttU_Net,self).__init__()
         
         self.Maxpool = nn.MaxPool2d(kernel_size=2,stride=2)
@@ -116,6 +149,9 @@ class AttU_Net(nn.Module):
 
     def forward(self,x):
         # encoding path
+    """
+    TODO: Document forward.
+    """
         x1 = self.Conv1(x)
 
         x2 = self.Maxpool(x1)

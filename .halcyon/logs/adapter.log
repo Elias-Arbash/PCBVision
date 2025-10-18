@@ -1,0 +1,5 @@
+2025-10-17 15:25:06,505 [INFO] Connecting to Halcyon Core via unix socket /home/evo-nirvana/.halcyon/core.sock
+2025-10-17 15:48:20,531 [INFO] Connecting to Halcyon Core via unix socket /home/evo-nirvana/.halcyon/core.sock
+2025-10-18 06:25:08,329 [INFO] Connecting to Halcyon Core via unix socket /home/evo-nirvana/.halcyon/core.sock
+2025-10-18 06:25:08,330 [INFO] Attached to Halcyon Core. Session token halcyon-PCBVision-20251018T112508. Policy version 0.1-draft.
+2025-10-18 06:25:08,828 [INFO] Received task 5a3f666c-d5f9-4351-9bcb-32e344de35d8 with command GENERATE_TESTS

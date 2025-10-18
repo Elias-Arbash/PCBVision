@@ -1,0 +1,39 @@
+mode: full
+project_id: PCBVision
+workspace: /home/evo-nirvana/halcyon-workspace
+project_path: /home/evo-nirvana/halcyon-workspace/PCBVision
+branch: halcyon-improvements-20251017
+adapter_started: false
+generated_at: '2025-10-17T20:48:24.313069+00:00'
+tasks:
+- slug: tests
+  status: skipped
+  duration_seconds: 1.36
+  message: 'No tests generated. Errors: Capsule generation failed for dataset_functions.py:
+    Command ''[''/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/venv/bin/python3'',
+    ''tools/autopilot_codegen/main.py'', ''tests'']'' returned non-zero exit status
+    2.; Fallback tests failed validation for dataset_functions.py (pytest may not
+    be installed)'
+- slug: docs-docstrings
+  status: skipped
+  duration_seconds: 0.39
+  message: No docstring gaps detected.
+- slug: lint
+  status: failed
+  duration_seconds: 0.43
+  message: compileall reported errors (exit code 1).
+- slug: tests-verify
+  status: failed
+  duration_seconds: 0.4
+  message: "Task failed: dispatch unavailable (Halcyon dispatch for task tests-verify\
+    \ failed with exit code 1.\nstdout:\n\nstderr:\n\u256D\u2500\u2500\u2500\u2500\
+    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\
+    \u2500); no local handler for RUN_TESTS"
+- slug: security
+  status: skipped
+  duration_seconds: 0.39
+  message: Bandit not installed; skipped.; pip-audit not installed; skipped.
+- slug: docs-readme
+  status: skipped
+  duration_seconds: 0.39
+  message: README already contained autopilot section.

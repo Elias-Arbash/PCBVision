@@ -1,0 +1,17 @@
+{
+  "adapter_id": "adapter-PCBVision",
+  "project_id": "PCBVision",
+  "root_path": "/home/evo-nirvana/halcyon-workspace/PCBVision",
+  "session_token": "halcyon-PCBVision-20251018T112508",
+  "policy_version": "0.1-draft",
+  "policy_delta": {},
+  "tasks_supported": [
+    "TODO_INJECT",
+    "RUN_TESTS",
+    "APPLY_PATCH",
+    "COMMIT"
+  ],
+  "heartbeat_interval_sec": 30,
+  "capsule_manifest": [],
+  "attached_at": "2025-10-18T11:25:08.330130+00:00"
+}
