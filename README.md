@@ -7,7 +7,7 @@ Our primary focus is to enhance the non-invasive optical analysis of E-waste mat
 
 ## Research Paper
 
-This GitHub repository corresponds to the research paper titled "PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards." The paper introduces the first RGB-Hyperspectral Imaging (HSI) benchmark segmentation dataset for PCBs. You can access the paper [here](https://arxiv.org/abs/2401.06528).
+This GitHub repository corresponds to the research paper titled "PCB-Vision: A Multiscene RGB-Hyperspectral Benchmark Dataset of Printed Circuit Boards." The paper introduces the first RGB-Hyperspectral Imaging (HSI) benchmark segmentation dataset for PCBs. You can access the paper [here](https://ieeexplore.ieee.org/document/10485259).
 
 images/training_hsi.png
 
@@ -31,7 +31,7 @@ To use the codes without errors, install the libraries listed in the Requirement
 
 ### Usage
 
-For detailed code instructions, please refer to the code documentation. More information about the methodology and experiments can be found in the paper [here](https://arxiv.org/abs/2401.06528).
+For detailed code instructions, please refer to the code documentation. More information about the methodology and experiments can be found in the paper [here](https://ieeexplore.ieee.org/document/10485259).
 
 ## Data Access
 
