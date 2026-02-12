@@ -17,7 +17,13 @@ from torchvision.models import resnet
 nonlinearity = nn.ReLU
 
 class DecoderBlock(nn.Module):
+"""
+TODO: Document DecoderBlock.
+"""
     def __init__(self, in_channels, n_filters):
+    """
+    TODO: Document __init__.
+    """
         super().__init__()
 
         # B, C, H, W -> B, C/4, H, W
@@ -37,6 +43,9 @@ class DecoderBlock(nn.Module):
         self.relu3 = nonlinearity(inplace=True)
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         x = self.conv1(x)
         x = self.norm1(x)
         x = self.relu1(x)
@@ -50,7 +59,13 @@ class DecoderBlock(nn.Module):
 
 
 class LinkNet(nn.Module):
+"""
+TODO: Document LinkNet.
+"""
     def __init__(self, num_classes, num_channels=3, encoder='resnet34'):
+    """
+    TODO: Document __init__.
+    """
         super().__init__()
         assert encoder in ['resnet18', 'resnet34']
 
@@ -83,6 +98,9 @@ class LinkNet(nn.Module):
 
     def forward(self, x):
         # Encoder
+    """
+    TODO: Document forward.
+    """
         x = self.firstconv(x)
         x = self.firstbn(x)
         x = self.firstrelu(x)

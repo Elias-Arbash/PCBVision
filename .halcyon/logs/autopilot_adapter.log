@@ -1,0 +1,79 @@
+Traceback (most recent call last):
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 15, in <module>
+    from halcyon_adapter import HalcyonAdapter
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/__init__.py", line 5, in <module>
+    from .adapter import HalcyonAdapter  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/adapter.py", line 21, in <module>
+    from halcyon_adapter.actions.executor import ActionExecutor
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/actions/executor.py", line 16, in <module>
+    from .automation import (
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/actions/automation.py", line 11, in <module>
+    from autopilot.tasks import TASK_REGISTRY, TaskOutcome
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/autopilot/__init__.py", line 5, in <module>
+    from .core import run_autopilot
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/autopilot/core.py", line 18, in <module>
+    from halcyon_onboard import ForkResult, clone_repository, ensure_branch, ensure_workspace, fork_repository
+ModuleNotFoundError: No module named 'halcyon_onboard'
+2025-10-17 15:25:06,505 [ERROR] root: Adapter exited with error: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 86, in <module>
+    main()
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 81, in main
+    asyncio.run(main_async())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 74, in main_async
+    await adapter.run()
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/adapter.py", line 85, in run
+    reader, writer = await asyncio.open_unix_connection(path=str(socket_path))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/streams.py", line 97, in open_unix_connection
+    transport, _ = await loop.create_unix_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 261, in create_unix_connection
+    await self.sock_connect(sock, path)
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 659, in _sock_connect
+    sock.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory
+2025-10-17 15:48:20,531 [ERROR] root: Adapter exited with error: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 86, in <module>
+    main()
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 81, in main
+    asyncio.run(main_async())
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/.halcyon/adapter.py", line 74, in main_async
+    await adapter.run()
+  File "/home/evo-nirvana/dev/projects/repos/pcbvision_halcyon/halcyon_adapter/adapter.py", line 85, in run
+    reader, writer = await asyncio.open_unix_connection(path=str(socket_path))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/streams.py", line 97, in open_unix_connection
+    transport, _ = await loop.create_unix_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/unix_events.py", line 261, in create_unix_connection
+    await self.sock_connect(sock, path)
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 659, in _sock_connect
+    sock.connect(address)
+FileNotFoundError: [Errno 2] No such file or directory

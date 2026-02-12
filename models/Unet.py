@@ -17,7 +17,13 @@ import torchvision.transforms.functional as TF
 
 class DoubleConv(nn.Module):
     # ... (unchanged)
+"""
+TODO: Document DoubleConv.
+"""
     def __init__(self, in_channels, out_channels):
+    """
+    TODO: Document __init__.
+    """
         super(DoubleConv, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(in_channels, out_channels, 3, 1, 1, bias=False),
@@ -29,13 +35,22 @@ class DoubleConv(nn.Module):
         )
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         return self.conv(x)
 
 class UNET(nn.Module):
     # ... (unchanged) except for 'out_channels'
+"""
+TODO: Document UNET.
+"""
     def __init__(
             self, in_channels=3, out_channels=4, features=[64, 128, 256, 512],
     ):
+    """
+    TODO: Document __init__.
+    """
         super(UNET, self).__init__()
         self.ups = nn.ModuleList()
         self.downs = nn.ModuleList()
@@ -59,6 +74,9 @@ class UNET(nn.Module):
         self.final_conv = nn.Conv2d(features[0], out_channels, kernel_size=1)
 
     def forward(self, x):
+    """
+    TODO: Document forward.
+    """
         skip_connections = []
 
         for down in self.downs:
